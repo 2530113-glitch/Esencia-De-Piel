@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esencia de Piel | Tu rutina facial según tu tipo de piel</title>
+  <meta name="description" content="Descubre tu tipo de piel y arma una rutina facial sencilla: limpiar, hidratar y proteger, con productos sugeridos para cada necesidad.">
+  <meta name="theme-color" content="#A12A68">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <div class="progreso" aria-hidden="true"></div>
+
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top rc-navbar" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="img/favicon.svg" alt="" width="36" height="36">Esencia de Piel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house me-1" aria-hidden="true"></i>Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="productos.html"><i class="bi bi-bag-heart me-1" aria-hidden="true"></i>Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="mi-rutina.html"><i class="bi bi-journal-check me-1" aria-hidden="true"></i>Mi rutina <span class="contador-rutina" aria-label="productos en tu rutina">0</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido" style="padding-top: 4.6rem;">
+
+    <section id="test" class="seccion-test con-ola">
+      <div class="mancha-extra" aria-hidden="true"></div>
+      <div class="container">
+        <div class="row align-items-center g-4 mb-4 mb-lg-5">
+          <div class="col-lg-7">
+            <span class="etiqueta-seccion"><i class="bi bi-stars" aria-hidden="true"></i>Test rápido de piel</span>
+            <h1>Descubre tu <span class="resaltado">tipo de piel</span></h1>
+            <p class="lead mt-3 mb-4">Elige la opción que más se parezca a tu piel y te mostraremos una rutina básica con productos adecuados para ti.</p>
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <a class="btn btn-rc btn-test d-inline-flex align-items-center gap-2" href="#elige">Hacer el test <i class="bi bi-arrow-down" aria-hidden="true"></i></a>
+              <a class="btn btn-rc-linea btn-lg" href="productos.html">Ver productos</a>
+            </div>
+            <ul class="beneficios">
+              <li><i class="bi bi-clock-history" aria-hidden="true"></i>Menos de un minuto</li>
+              <li><i class="bi bi-magic" aria-hidden="true"></i>Rutina personalizada</li>
+              <li><i class="bi bi-heart-pulse" aria-hidden="true"></i>Sin productos innecesarios</li>
+            </ul>
+          </div>
+          <div class="col-lg-5 text-center">
+            <img src="img/ilustraciones/hero-skincare.svg" alt="Ilustración de productos de cuidado facial: sérum, crema, tubo y botella con dosificador" width="520" height="460" class="img-fluid ilustracion-hero" fetchpriority="high">
+          </div>
+        </div>
+        <h2 class="h3 mb-4" id="elige">¿Cuál se parece más a tu piel?</h2>
+        <div class="row g-3 g-lg-4">
+          <div class="col-6 col-lg-3">
+            <button type="button" class="opcion-piel piel-seca" data-piel="seca" aria-pressed="false">
+              <span class="opcion-visual">
+                <img src="img/ilustraciones/piel-seca.svg" alt="" width="108" height="108" class="rostro">
+                <span class="opcion-brillo"></span>
+              </span>
+              <span class="opcion-check" aria-hidden="true"><i class="bi bi-check-lg"></i></span>
+              <span class="opcion-texto">
+                <strong>Seca</strong>
+                <span class="desc">Se siente tirante, se ve opaca y a veces se descama.</span>
+                <span class="opcion-cta">Elegir <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+              </span>
+            </button>
+          </div>
+          <div class="col-6 col-lg-3">
+            <button type="button" class="opcion-piel piel-grasa" data-piel="grasa" aria-pressed="false">
+              <span class="opcion-visual">
+                <img src="img/ilustraciones/piel-grasa.svg" alt="" width="108" height="108" class="rostro">
+                <span class="opcion-brillo"></span>
+              </span>
+              <span class="opcion-check" aria-hidden="true"><i class="bi bi-check-lg"></i></span>
+              <span class="opcion-texto">
+                <strong>Grasa</strong>
+                <span class="desc">Brilla en todo el rostro y los poros se notan más.</span>
+                <span class="opcion-cta">Elegir <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+              </span>
+            </button>
+          </div>
+          <div class="col-6 col-lg-3">
+            <button type="button" class="opcion-piel piel-mixta" data-piel="mixta" aria-pressed="false">
+              <span class="opcion-visual">
+                <img src="img/ilustraciones/piel-mixta.svg" alt="" width="108" height="108" class="rostro">
+                <span class="opcion-brillo"></span>
+              </span>
+              <span class="opcion-check" aria-hidden="true"><i class="bi bi-check-lg"></i></span>
+              <span class="opcion-texto">
+                <strong>Mixta</strong>
+                <span class="desc">Frente, nariz y barbilla con brillo; mejillas normales o secas.</span>
+                <span class="opcion-cta">Elegir <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+              </span>
+            </button>
+          </div>
+          <div class="col-6 col-lg-3">
+            <button type="button" class="opcion-piel piel-sensible" data-piel="sensible" aria-pressed="false">
+              <span class="opcion-visual">
+                <img src="img/ilustraciones/piel-sensible.svg" alt="" width="108" height="108" class="rostro">
+                <span class="opcion-brillo"></span>
+              </span>
+              <span class="opcion-check" aria-hidden="true"><i class="bi bi-check-lg"></i></span>
+              <span class="opcion-texto">
+                <strong>Sensible</strong>
+                <span class="desc">Se enrojece, arde o pica con facilidad.</span>
+                <span class="opcion-cta">Elegir <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <p class="consejo texto-secundario mt-4 mb-0"><strong>¿No estás seguro?</strong> Lava tu cara con agua, sécala y espera una hora sin aplicar nada. Si brilla toda, es grasa; si solo brilla la zona central, es mixta; si se siente tirante, es seca.</p>
+      </div>
+    </section>
+
+    <section id="rutina">
+      <div class="container">
+        <span class="etiqueta-seccion revelar"><i class="bi bi-list-check" aria-hidden="true"></i>Paso a paso</span>
+        <h2 class="revelar">Tu ritual esencial de cuidado</h2>
+        <p class="lead mb-4 revelar">Con estos tres pasos cubres lo esencial. Añade a tu rutina los productos que te interesen y consúltala cuando quieras en <a href="mi-rutina.html">Mi rutina</a>.</p>
+        <div class="aviso-filtro" role="status">
+          <span><i class="bi bi-funnel-fill me-1" aria-hidden="true"></i>Mostrando productos para piel <strong id="pielElegida">grasa</strong></span>
+          <button type="button" class="btn btn-rc-linea btn-sm" id="verTodos">Ver todos</button>
+        </div>
+        <div class="row g-4 g-lg-5">
+        <div class="col-lg-4 revelar">
+          <div class="columna-paso">
+            <div class="cabecera-paso"><img src="img/ilustraciones/paso-limpiar.svg" alt="" width="64" height="64"><h3>Limpiar</h3><span class="numero">Paso 1</span></div>
+            <p class="texto-secundario">Retira grasa, sudor y suciedad sin resecar.</p>
+            <div class="row g-3">
+            <div class="col-sm-6 col-lg-12 producto" data-pieles="seca grasa mixta sensible">
+              <article class="tarjeta-producto">
+                <span class="badge-horario noche" aria-label="Uso de noche">🌙 Noche</span>
+                <div class="fila">
+                  <img src="img/agua-micelar.svg" alt="" width="76" height="76" loading="lazy">
+                  <div><h4>Agua micelar sin fragancia</h4><p class="apto">Todo tipo de piel</p></div>
+                </div>
+                <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="agua-micelar"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-agua-micelar" aria-expanded="false" aria-controls="info-agua-micelar">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+                <div class="collapse" id="info-agua-micelar"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Micelas</strong><p>Atrapan el maquillaje y el protector solar sin necesidad de frotar. Úsala como primer paso de la noche.</p></div></div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-12 producto" data-pieles="grasa mixta">
+              <article class="tarjeta-producto">
+                <span class="badge-horario ambos" aria-label="Uso de día y de noche">☀️/🌙 Día y Noche</span>
+                <div class="fila">
+                  <img src="img/gel-limpiador.svg" alt="" width="76" height="76" loading="lazy">
+                  <div><h4>Gel limpiador purificante</h4><p class="apto">Piel grasa y mixta</p></div>
+                </div>
+                <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="gel-limpiador"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-gel-limpiador" aria-expanded="false" aria-controls="info-gel-limpiador">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+                <div class="collapse" id="info-gel-limpiador"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Ácido salicílico 0.5 %</strong><p>Entra en el poro y ayuda a retirar el exceso de sebo. Si notas resequedad, úsalo solo por la noche.</p></div></div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-12 producto" data-pieles="seca sensible">
+              <article class="tarjeta-producto">
+                <span class="badge-horario ambos" aria-label="Uso de día y de noche">☀️/🌙 Día y Noche</span>
+                <div class="fila">
+                  <img src="img/crema-limpiadora.svg" alt="" width="76" height="76" loading="lazy">
+                  <div><h4>Crema limpiadora nutritiva</h4><p class="apto">Piel seca y sensible</p></div>
+                </div>
+                <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="crema-limpiadora"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-crema-limpiadora" aria-expanded="false" aria-controls="info-crema-limpiadora">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+                <div class="collapse" id="info-crema-limpiadora"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Glicerina</strong><p>Atrae agua hacia la piel y limpia sin arrastrar sus aceites naturales.</p></div></div>
+              </article>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 revelar">
+          <div class="columna-paso">
+            <div class="cabecera-paso"><img src="img/ilustraciones/paso-hidratar.svg" alt="" width="64" height="64"><h3>Hidratar</h3><span class="numero">Paso 2</span></div>
+            <p class="texto-secundario">Repone el agua y fortalece la barrera de la piel.</p>
+            <div class="row g-3">
+            <div class="col-sm-6 col-lg-12 producto" data-pieles="grasa mixta">
+              <article class="tarjeta-producto">
+                <span class="badge-horario ambos" aria-label="Uso de día y de noche">☀️/🌙 Día y Noche</span>
+                <div class="fila">
+                  <img src="img/gel-hidratante.svg" alt="" width="76" height="76" loading="lazy">
+                  <div><h4>Gel hidratante ligero</h4><p class="apto">Piel grasa y mixta</p></div>
+                </div>
+                <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="gel-hidratante"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-gel-hidratante" aria-expanded="false" aria-controls="info-gel-hidratante">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+                <div class="collapse" id="info-gel-hidratante"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Ácido hialurónico</strong><p>Retiene agua en la superficie de la piel y la hidrata sin sensación grasosa.</p></div></div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-12 producto" data-pieles="seca mixta">
+              <article class="tarjeta-producto">
+                <span class="badge-horario noche" aria-label="Uso de noche">🌙 Noche</span>
+                <div class="fila">
+                  <img src="img/crema-ceramidas.svg" alt="" width="76" height="76" loading="lazy">
+                  <div><h4>Crema reparadora con ceramidas</h4><p class="apto">Piel seca y mixta</p></div>
+                </div>
+                <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="crema-ceramidas"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-crema-ceramidas" aria-expanded="false" aria-controls="info-crema-ceramidas">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+                <div class="collapse" id="info-crema-ceramidas"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Ceramidas</strong><p>Son lípidos de la barrera cutánea; ayudan a reducir la pérdida de agua durante la noche.</p></div></div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-12 producto" data-pieles="seca sensible">
+              <article class="tarjeta-producto">
+                <span class="badge-horario ambos" aria-label="Uso de día y de noche">☀️/🌙 Día y Noche</span>
+                <div class="fila">
+                  <img src="img/crema-avena.svg" alt="" width="76" height="76" loading="lazy">
+                  <div><h4>Crema calmante de avena</h4><p class="apto">Piel seca y sensible</p></div>
+                </div>
+                <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="crema-avena"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-crema-avena" aria-expanded="false" aria-controls="info-crema-avena">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+                <div class="collapse" id="info-crema-avena"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Avena coloidal</strong><p>Alivia la comezón y la irritación. Es apta incluso para piel con tendencia atópica.</p></div></div>
+              </article>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 revelar">
+          <div class="columna-paso">
+            <div class="cabecera-paso"><img src="img/ilustraciones/paso-proteger.svg" alt="" width="64" height="64"><h3>Proteger</h3><span class="numero">Paso 3</span></div>
+            <p class="texto-secundario">Previene manchas y envejecimiento por el sol.</p>
+            <div class="row g-3">
+            <div class="col-sm-6 col-lg-12 producto" data-pieles="grasa mixta">
+              <article class="tarjeta-producto">
+                <span class="badge-horario dia" aria-label="Uso de día">☀️ Día</span>
+                <div class="fila">
+                  <img src="img/fps-fluido.svg" alt="" width="76" height="76" loading="lazy">
+                  <div><h4>Protector solar fluido FPS 50</h4><p class="apto">Piel grasa y mixta</p></div>
+                </div>
+                <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="fps-fluido"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-fps-fluido" aria-expanded="false" aria-controls="info-fps-fluido">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+                <div class="collapse" id="info-fps-fluido"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Filtros de amplio espectro</strong><p>Protegen de los rayos UVA y UVB con acabado mate. Reaplícalo cada 2 o 3 horas si estás al sol.</p></div></div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-12 producto" data-pieles="seca sensible">
+              <article class="tarjeta-producto">
+                <span class="badge-horario dia" aria-label="Uso de día">☀️ Día</span>
+                <div class="fila">
+                  <img src="img/fps-mineral.svg" alt="" width="76" height="76" loading="lazy">
+                  <div><h4>Protector solar mineral FPS 50</h4><p class="apto">Piel seca y sensible</p></div>
+                </div>
+                <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="fps-mineral"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-fps-mineral" aria-expanded="false" aria-controls="info-fps-mineral">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+                <div class="collapse" id="info-fps-mineral"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Óxido de zinc</strong><p>Filtro mineral que refleja la radiación; suele irritar menos a las pieles sensibles.</p></div></div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-12 producto" data-pieles="seca grasa mixta sensible">
+              <article class="tarjeta-producto">
+                <span class="badge-horario dia" aria-label="Uso de día">☀️ Día</span>
+                <div class="fila">
+                  <img src="img/balsamo-labial.svg" alt="" width="76" height="76" loading="lazy">
+                  <div><h4>Bálsamo labial FPS 30</h4><p class="apto">Todo tipo de piel</p></div>
+                </div>
+                <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="balsamo-labial"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-balsamo-labial" aria-expanded="false" aria-controls="info-balsamo-labial">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+                <div class="collapse" id="info-balsamo-labial"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Manteca de karité</strong><p>Hidrata y protege los labios, una zona que solemos olvidar al aplicar protector.</p></div></div>
+              </article>
+            </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-0">
+      <div class="container">
+        <div class="banda-consejo revelar">
+          <div class="row align-items-center g-4">
+            <div class="col-md-4 col-lg-3 text-center">
+              <img src="img/ilustraciones/mascarilla.svg" alt="Ilustración de una persona relajada con mascarilla facial y rodajas de pepino en los ojos" width="240" height="240" class="img-fluid" loading="lazy">
+            </div>
+            <div class="col-md-8 col-lg-9">
+              <span class="etiqueta-seccion etiqueta-clara"><i class="bi bi-lightbulb" aria-hidden="true"></i>Consejo de cuidado</span>
+              <h2>Menos es más</h2>
+              <p class="mb-0">Introduce un solo producto nuevo a la vez y espera unas dos semanas antes de añadir otro. Así sabrás qué le funciona a tu piel y qué no. La constancia importa más que la cantidad de productos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="necesidades" class="seccion-necesidades">
+      <div class="container">
+        <span class="etiqueta-seccion revelar"><i class="bi bi-bullseye" aria-hidden="true"></i>Tratamientos</span>
+        <h2 class="revelar">Soluciones para cada necesidad</h2>
+        <p class="lead mb-5 revelar">Un tratamiento se aplica después de limpiar y antes de hidratar. Empieza con uno solo para saber cómo reacciona tu piel.</p>
+        <div class="row g-4">
+        <div class="col-sm-6 col-lg-3 revelar">
+          <article class="tarjeta-necesidad">
+            <span class="badge-horario ambos" aria-label="Uso de día y de noche">☀️/🌙 Día y Noche</span>
+            <div class="icono-necesidad" style="background: var(--rc-menta);"><i class="bi bi-brightness-high" aria-hidden="true"></i></div>
+            <h3>Brillos</h3>
+            <p class="texto-secundario">Para el rostro que brilla a media mañana y los poros visibles.</p>
+            <div class="producto-sugerido">
+              <img src="img/serum-niacinamida.svg" alt="" width="56" height="56" loading="lazy">
+              <div><h4 class="h5 fs-6 mb-0">Sérum de niacinamida 5 %</h4><p class="small texto-secundario mb-0">Piel grasa y mixta</p></div>
+            </div>
+            <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="serum-niacinamida"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-serum-niacinamida" aria-expanded="false" aria-controls="info-serum-niacinamida">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+            <div class="collapse" id="info-serum-niacinamida"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Niacinamida</strong><p>Ayuda a regular el sebo y mejora la apariencia de los poros. Se tolera bien en casi todas las pieles.</p></div></div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-lg-3 revelar">
+          <article class="tarjeta-necesidad">
+            <span class="badge-horario dia" aria-label="Uso de día">☀️ Día</span>
+            <div class="icono-necesidad" style="background: var(--rc-mantequilla);"><i class="bi bi-circle-half" aria-hidden="true"></i></div>
+            <h3>Manchas</h3>
+            <p class="texto-secundario">Para unificar el tono y las marcas que dejan los granitos o el sol.</p>
+            <div class="producto-sugerido">
+              <img src="img/serum-vitamina-c.svg" alt="" width="56" height="56" loading="lazy">
+              <div><h4 class="h5 fs-6 mb-0">Sérum de vitamina C</h4><p class="small texto-secundario mb-0">Piel seca, grasa y mixta</p></div>
+            </div>
+            <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="serum-vitamina-c"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-serum-vitamina-c" aria-expanded="false" aria-controls="info-serum-vitamina-c">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+            <div class="collapse" id="info-serum-vitamina-c"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Vitamina C</strong><p>Antioxidante que unifica el tono. Úsala por la mañana, siempre debajo del protector solar.</p></div></div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-lg-3 revelar">
+          <article class="tarjeta-necesidad">
+            <span class="badge-horario noche" aria-label="Uso de noche">🌙 Noche</span>
+            <div class="icono-necesidad" style="background: var(--rc-lavanda);"><i class="bi bi-grid-3x3-gap" aria-hidden="true"></i></div>
+            <h3>Textura</h3>
+            <p class="texto-secundario">Para la piel áspera, con relieve o marcas finas.</p>
+            <div class="producto-sugerido">
+              <img src="img/serum-retinol.svg" alt="" width="56" height="56" loading="lazy">
+              <div><h4 class="h5 fs-6 mb-0">Sérum de retinol 0.25 %</h4><p class="small texto-secundario mb-0">Piel seca, grasa y mixta</p></div>
+            </div>
+            <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="serum-retinol"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-serum-retinol" aria-expanded="false" aria-controls="info-serum-retinol">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+            <div class="collapse" id="info-serum-retinol"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Retinol</strong><p>Acelera la renovación de la piel. Empieza con dos noches por semana y usa protector solar a diario.</p></div></div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-lg-3 revelar">
+          <article class="tarjeta-necesidad">
+            <span class="badge-horario ambos" aria-label="Uso de día y de noche">☀️/🌙 Día y Noche</span>
+            <div class="icono-necesidad" style="background: var(--rc-rubor);"><i class="bi bi-flower1" aria-hidden="true"></i></div>
+            <h3>Calma</h3>
+            <p class="texto-secundario">Para el enrojecimiento, el ardor o la piel irritada.</p>
+            <div class="producto-sugerido">
+              <img src="img/gel-centella.svg" alt="" width="56" height="56" loading="lazy">
+              <div><h4 class="h5 fs-6 mb-0">Gel calmante de centella asiática</h4><p class="small texto-secundario mb-0">Todo tipo de piel</p></div>
+            </div>
+            <div class="acciones">
+                  <button type="button" class="btn btn-rc btn-sm btn-anadir" data-id="gel-centella"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i><span>Añadir a mi rutina</span></button>
+                  <button type="button" class="btn btn-rc-linea btn-sm" data-bs-toggle="collapse" data-bs-target="#info-gel-centella" aria-expanded="false" aria-controls="info-gel-centella">Saber más <i class="bi bi-chevron-down ms-1" aria-hidden="true"></i></button>
+                </div>
+            <div class="collapse" id="info-gel-centella"><div class="info-ingrediente"><strong><i class="bi bi-eyedropper me-1" aria-hidden="true"></i>Centella asiática</strong><p>Reduce el enrojecimiento y ayuda a la piel irritada a recuperarse.</p></div></div>
+          </article>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button type="button" class="volver-arriba" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="toastRutina" class="toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body"><i class="bi bi-check-circle-fill me-2" style="color: var(--rc-primario);" aria-hidden="true"></i><span id="toastTexto">Producto añadido</span></div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="rc-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5 col-md-6">
+          <h2><img src="img/favicon.svg" alt="" width="28" height="28" class="me-2">Esencia de Piel</h2>
+          <p>Guía para armar una rutina de cuidado facial sencilla según tu tipo de piel. La información es educativa y no sustituye la consulta con un dermatólogo.</p>
+          <p><i class="bi bi-envelope me-2" aria-hidden="true"></i><a href="mailto:hola@esenciadepiel.mx">hola@esenciadepiel.mx</a></p>
+          <div class="redes">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h2>Navegación</h2>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#test">Test de piel</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="mi-rutina.html">Mi rutina</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 col-6">
+          <h2>Integrantes</h2>
+          <ul>
+            <li><i class="bi bi-person-heart me-2" aria-hidden="true"></i>Amaris Yoselin Lara Paulino</li>
+            <li><i class="bi bi-person-heart me-2" aria-hidden="true"></i>Zuri Yvette Rosales Marquez</li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal mb-0">&copy; <span class="anio">2026</span> Esencia de Piel. Proyecto escolar con fines educativos.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/datos.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

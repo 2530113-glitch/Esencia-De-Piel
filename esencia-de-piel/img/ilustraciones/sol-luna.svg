@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260"><style>
+.flota{animation:flota 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.flota2{animation:flota 6s ease-in-out -2s infinite;transform-box:fill-box;transform-origin:center}
+.brilla{animation:brilla 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.brilla2{animation:brilla 3.4s ease-in-out -1.2s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes flota{50%{transform:translateY(-10px)}}
+@keyframes brilla{0%,100%{opacity:.35;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<path d="M0 0 H210 V260 H0Z" fill="#FCEFD0"/><path d="M210 0 H420 V260 H210Z" fill="#E4E0F5"/>
+<path d="M210 0 V260" stroke="#22302D" stroke-width="3" stroke-dasharray="8 8" opacity=".3"/>
+<g class="brilla2"><g stroke="#F2A541" stroke-width="6" stroke-linecap="round"><path d="M105 30 v16 M105 154 v16 M35 100 h16 M159 100 h16 M56 51 l11 11 M143 138 l11 11 M56 149 l11 -11 M143 62 l11 -11"/></g></g>
+<circle cx="105" cy="100" r="40" fill="#FFD36B" stroke="#22302D" stroke-width="3.5"/>
+<path d="M92 100 q6 6 12 0 M108 100 q6 6 12 0" stroke="#22302D" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M96 114 q9 7 18 0" stroke="#22302D" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M330 60 a42 42 0 1 0 30 70 a34 34 0 0 1 -30 -70z" fill="#fff" stroke="#22302D" stroke-width="3.5"/>
+<path d="M316 104 q6 5 12 0" stroke="#22302D" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path class="brilla" d="M270 51 Q270 60 279 60 Q270 60 270 69 Q270 60 261 60 Q270 60 270 51Z" fill="#A592E0"/><path class="brilla2" d="M380 182 Q380 190 388 190 Q380 190 380 198 Q380 190 372 190 Q380 190 380 182Z" fill="#A592E0"/><path class="brilla2" d="M260 174 Q260 180 266 180 Q260 180 260 186 Q260 180 254 180 Q260 180 260 174Z" fill="#fff"/><path class="brilla" d="M390 44 Q390 50 396 50 Q390 50 390 56 Q390 50 384 50 Q390 50 390 44Z" fill="#fff"/>
+<g transform="translate(70 180)"><rect x="0" y="10" width="34" height="60" rx="10" fill="#FFB547" stroke="#22302D" stroke-width="3"/><rect x="9" y="0" width="16" height="12" rx="3" fill="#fff" stroke="#22302D" stroke-width="3"/></g>
+<g transform="translate(118 196)"><rect x="0" y="0" width="56" height="14" rx="4" fill="#fff" stroke="#22302D" stroke-width="3"/><rect x="-2" y="12" width="60" height="40" rx="10" fill="#FFD36B" stroke="#22302D" stroke-width="3"/></g>
+<g transform="translate(270 184)"><rect x="10" y="0" width="14" height="14" rx="7" fill="#22302D"/><rect x="0" y="12" width="34" height="58" rx="10" fill="#A592E0" stroke="#22302D" stroke-width="3"/></g>
+<g transform="translate(320 196)"><rect x="0" y="0" width="56" height="14" rx="4" fill="#fff" stroke="#22302D" stroke-width="3"/><rect x="-2" y="12" width="60" height="40" rx="10" fill="#F6DCD6" stroke="#22302D" stroke-width="3"/></g>
+</svg>

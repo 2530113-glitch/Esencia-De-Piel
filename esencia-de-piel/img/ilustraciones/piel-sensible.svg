@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><style>
+.flota{animation:flota 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.flota2{animation:flota 6s ease-in-out -2s infinite;transform-box:fill-box;transform-origin:center}
+.brilla{animation:brilla 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.brilla2{animation:brilla 3.4s ease-in-out -1.2s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes flota{50%{transform:translateY(-10px)}}
+@keyframes brilla{0%,100%{opacity:.35;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><defs><clipPath id="recorte"><circle cx="100" cy="100" r="97"/></clipPath></defs><g clip-path="url(#recorte)">
+<circle cx="100" cy="100" r="96" fill="#fff" opacity=".7"/>
+<ellipse cx="100" cy="82" rx="54" ry="52" fill="#C9773A"/>
+<path d="M70 165 Q100 150 130 165 L140 200 H60Z" fill="#F7DCCB"/>
+<path d="M58 200 Q60 172 100 170 Q140 172 142 200Z" fill="#fff" stroke="#22302D" stroke-width="3"/>
+<ellipse cx="52" cy="108" rx="9" ry="13" fill="#F7DCCB" stroke="#22302D" stroke-width="2.5"/>
+<ellipse cx="148" cy="108" rx="9" ry="13" fill="#F7DCCB" stroke="#22302D" stroke-width="2.5"/>
+<ellipse cx="100" cy="104" rx="48" ry="56" fill="#F7DCCB" stroke="#22302D" stroke-width="3"/>
+<path d="M50 90 C50 48 150 48 150 84 C120 76 90 58 70 72 C62 80 56 86 50 90Z" fill="#C9773A"/>
+<path d="M76 108 q8 7 16 0 M108 108 q8 7 16 0" stroke="#22302D" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M98 116 q-3 10 4 12" stroke="#22302D" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/>
+<path d="M88 138 q12 10 24 0" stroke="#22302D" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<ellipse class="brilla" cx="72" cy="126" rx="13" ry="8" fill="#F27C8F" opacity=".6"/><ellipse class="brilla2" cx="128" cy="126" rx="13" ry="8" fill="#F27C8F" opacity=".6"/><g fill="#E0526B"><circle cx="66" cy="124" r="1.8"/><circle cx="74" cy="129" r="1.8"/><circle cx="78" cy="122" r="1.5"/><circle cx="124" cy="123" r="1.8"/><circle cx="132" cy="128" r="1.8"/><circle cx="135" cy="121" r="1.5"/></g>
+</g></svg>

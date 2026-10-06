@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><style>
+.flota{animation:flota 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.flota2{animation:flota 6s ease-in-out -2s infinite;transform-box:fill-box;transform-origin:center}
+.brilla{animation:brilla 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.brilla2{animation:brilla 3.4s ease-in-out -1.2s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes flota{50%{transform:translateY(-10px)}}
+@keyframes brilla{0%,100%{opacity:.35;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><circle cx="60" cy="60" r="58" fill="#FCEFD0"/><g class="brilla2"><g stroke="#F2A541" stroke-width="5" stroke-linecap="round"><path d="M60 12 v10 M60 98 v10 M12 60 h10 M98 60 h10 M26 26 l7 7 M87 87 l7 7 M26 94 l7 -7 M87 33 l7 -7"/></g></g><circle cx="60" cy="60" r="26" fill="#FFD36B" stroke="#22302D" stroke-width="3"/><path d="M60 46 l14 5 v10 c0 9 -6 15 -14 18 c-8 -3 -14 -9 -14 -18 v-10z" fill="#fff" stroke="#22302D" stroke-width="3"/><path d="M54 61 l5 5 l8 -9" stroke="#2F6B5E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>

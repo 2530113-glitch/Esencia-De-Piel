@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi rutina | Esencia de Piel</title>
+  <meta name="description" content="Consulta tu rutina facial de mañana y de noche, ordenada según el orden de aplicación, y déjanos tus comentarios.">
+  <meta name="theme-color" content="#A12A68">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <div class="progreso" aria-hidden="true"></div>
+
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top rc-navbar" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="img/favicon.svg" alt="" width="36" height="36">Esencia de Piel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house me-1" aria-hidden="true"></i>Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="productos.html"><i class="bi bi-bag-heart me-1" aria-hidden="true"></i>Productos</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="mi-rutina.html"><i class="bi bi-journal-check me-1" aria-hidden="true"></i>Mi rutina <span class="contador-rutina" aria-label="productos en tu rutina">0</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido" style="padding-top: 4.6rem;">
+
+    <section class="encabezado-pagina">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="etiqueta-seccion"><i class="bi bi-journal-check" aria-hidden="true"></i>Tu selección</span>
+            <h1>Mi ritual de <span class="resaltado">cuidado</span></h1>
+            <p class="lead mt-3 mb-0" id="resumenPiel">Aquí aparecen los productos que añadas, ordenados en el orden correcto de aplicación.</p>
+          </div>
+          <div class="col-lg-5 text-center">
+            <img src="img/ilustraciones/sol-luna.svg" alt="Ilustración de un sol y una luna con productos para la rutina de día y de noche" width="420" height="260" class="img-fluid ilustracion-hero rounded-4" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="panel panel-manana h-100">
+              <h2 class="fs-3"><span aria-hidden="true">☀️</span> Rutina de mañana</h2>
+              <ol class="lista-rutina" id="listaManana"></ol>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-noche h-100">
+              <h2 class="fs-3"><span aria-hidden="true">🌙</span> Rutina de noche</h2>
+              <ol class="lista-rutina" id="listaNoche"></ol>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a class="btn btn-rc" href="index.html#test"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i>Añadir más productos</a>
+          <button type="button" class="btn btn-rc-linea" id="vaciarRutina"><i class="bi bi-trash3 me-1" aria-hidden="true"></i>Vaciar rutina</button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="comentarios" class="seccion-comentarios">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <span class="etiqueta-seccion revelar"><i class="bi bi-chat-heart" aria-hidden="true"></i>Tu opinión</span>
+            <h2 class="revelar">Cuéntanos tu experiencia</h2>
+            <p class="texto-secundario revelar">¿Te sirvió tu rutina? ¿Tienes dudas o sugerencias? Déjanos tu comentario y te responderemos por correo.</p>
+            <ul class="list-unstyled mt-4 revelar">
+              <li class="mb-2"><i class="bi bi-check2-circle me-2" style="color: var(--rc-primario);" aria-hidden="true"></i>Respondemos en menos de 48 horas</li>
+              <li class="mb-2"><i class="bi bi-check2-circle me-2" style="color: var(--rc-primario);" aria-hidden="true"></i>Tu correo no se comparte con nadie</li>
+              <li><i class="bi bi-check2-circle me-2" style="color: var(--rc-primario);" aria-hidden="true"></i>Tus comentarios nos ayudan a mejorar la guía</li>
+            </ul>
+
+            <h3 class="h5 mt-5 revelar">Comentarios de la comunidad</h3>
+            <div id="listaComentarios" class="lista-comentarios revelar" aria-live="polite">
+              <article class="comentario">
+                <div class="d-flex justify-content-between align-items-center gap-2">
+                  <strong>Valeria</strong><span class="estrellas-fijas" aria-label="5 de 5 estrellas">★★★★★</span>
+                </div>
+                <p class="small texto-secundario mb-1">Piel mixta</p>
+                <p class="mb-0">El test me ayudó mucho. No sabía que mi piel era mixta y ahora uso el gel hidratante.</p>
+              </article>
+              <article class="comentario">
+                <div class="d-flex justify-content-between align-items-center gap-2">
+                  <strong>Diego</strong><span class="estrellas-fijas" aria-label="4 de 5 estrellas">★★★★☆</span>
+                </div>
+                <p class="small texto-secundario mb-1">Piel grasa</p>
+                <p class="mb-0">Me gustó que la rutina esté separada en mañana y noche. Muy fácil de seguir.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="panel">
+              <h3 class="h4 mb-1">Deja tu comentario</h3>
+              <p class="texto-secundario">Los campos marcados con * son obligatorios.</p>
+              <form id="formComentario" class="row g-3" novalidate>
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre *</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" autocomplete="given-name" required minlength="2">
+                  <div class="invalid-feedback">Escribe tu nombre.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="correo" class="form-label">Correo electrónico *</label>
+                  <input type="email" class="form-control" id="correo" name="correo" autocomplete="email" required>
+                  <div class="invalid-feedback">Escribe un correo válido, por ejemplo nombre@correo.com.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="tipoPiel" class="form-label">Tipo de piel *</label>
+                  <select class="form-select" id="tipoPiel" name="tipoPiel" required>
+                    <option value="" selected disabled>Selecciona una opción</option>
+                    <option value="seca">Seca</option>
+                    <option value="grasa">Grasa</option>
+                    <option value="mixta">Mixta</option>
+                    <option value="sensible">Sensible</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona tu tipo de piel.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="tema" class="form-label">Tema *</label>
+                  <select class="form-select" id="tema" name="tema" required>
+                    <option value="" selected disabled>Selecciona una opción</option>
+                    <option>Mi experiencia con la rutina</option>
+                    <option>Duda sobre un producto</option>
+                    <option>Sugerencia para el sitio</option>
+                    <option>Otro</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona un tema.</div>
+                </div>
+                <div class="col-12">
+                  <fieldset>
+                    <legend class="form-label fs-6 mb-1">¿Qué calificación le das a tu rutina?</legend>
+                    <div class="calificacion">
+                      <input type="radio" id="e5" name="estrellas" value="5"><label for="e5" title="5 estrellas"><span class="visually-hidden">5 estrellas</span></label>
+                      <input type="radio" id="e4" name="estrellas" value="4"><label for="e4" title="4 estrellas"><span class="visually-hidden">4 estrellas</span></label>
+                      <input type="radio" id="e3" name="estrellas" value="3"><label for="e3" title="3 estrellas"><span class="visually-hidden">3 estrellas</span></label>
+                      <input type="radio" id="e2" name="estrellas" value="2"><label for="e2" title="2 estrellas"><span class="visually-hidden">2 estrellas</span></label>
+                      <input type="radio" id="e1" name="estrellas" value="1"><label for="e1" title="1 estrella"><span class="visually-hidden">1 estrella</span></label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="col-12">
+                  <label for="comentario" class="form-label">Comentario *</label>
+                  <textarea class="form-control" id="comentario" name="comentario" rows="4" required minlength="10" maxlength="400" placeholder="Cuéntanos cómo te fue con tu rutina o qué te gustaría ver en la página"></textarea>
+                  <div class="d-flex justify-content-between">
+                    <div class="invalid-feedback">Escribe al menos 10 caracteres.</div>
+                    <small class="texto-secundario ms-auto" id="contadorCaracteres">0/400</small>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="publicar" checked>
+                    <label class="form-check-label" for="publicar">Publicar mi comentario en la página (solo se mostrará mi nombre).</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="acepto" required>
+                    <label class="form-check-label" for="acepto">Acepto que Esencia de Piel use mi correo solo para responder mi comentario. *</label>
+                    <div class="invalid-feedback">Debes aceptar para continuar.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-rc btn-lg"><i class="bi bi-send-fill me-2" aria-hidden="true"></i>Enviar comentario</button>
+                </div>
+              </form>
+              <div class="confirmacion text-center py-4" tabindex="-1" role="status">
+                <i class="bi bi-envelope-check-fill display-3" style="color: var(--rc-primario);" aria-hidden="true"></i>
+                <h3 class="h4 mt-3">¡Gracias por tu comentario!</h3>
+                <p>Listo, <span id="nombreConfirmacion"></span>. Te responderemos a <strong id="correoConfirmacion"></strong> en menos de 48 horas.</p>
+                <button type="button" class="btn btn-rc-linea" id="otroComentario"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i>Escribir otro comentario</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button type="button" class="volver-arriba" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="toastRutina" class="toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body"><i class="bi bi-check-circle-fill me-2" style="color: var(--rc-primario);" aria-hidden="true"></i><span id="toastTexto">Producto añadido</span></div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="rc-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5 col-md-6">
+          <h2><img src="img/favicon.svg" alt="" width="28" height="28" class="me-2">Esencia de Piel</h2>
+          <p>Guía para armar una rutina de cuidado facial sencilla según tu tipo de piel. La información es educativa y no sustituye la consulta con un dermatólogo.</p>
+          <p><i class="bi bi-envelope me-2" aria-hidden="true"></i><a href="mailto:hola@esenciadepiel.mx">hola@esenciadepiel.mx</a></p>
+          <div class="redes">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h2>Navegación</h2>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#test">Test de piel</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="mi-rutina.html">Mi rutina</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 col-6">
+          <h2>Integrantes</h2>
+          <ul>
+            <li><i class="bi bi-person-heart me-2" aria-hidden="true"></i>Amaris Yoselin Lara Paulino</li>
+            <li><i class="bi bi-person-heart me-2" aria-hidden="true"></i>Zuri Yvette Rosales Marquez</li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal mb-0">&copy; <span class="anio">2026</span> Esencia de Piel. Proyecto escolar con fines educativos.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/datos.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

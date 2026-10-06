@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><style>
+.flota{animation:flota 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.flota2{animation:flota 6s ease-in-out -2s infinite;transform-box:fill-box;transform-origin:center}
+.brilla{animation:brilla 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.brilla2{animation:brilla 3.4s ease-in-out -1.2s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes flota{50%{transform:translateY(-10px)}}
+@keyframes brilla{0%,100%{opacity:.35;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><defs><clipPath id="recorte"><circle cx="120" cy="120" r="112"/></clipPath></defs><g clip-path="url(#recorte)">
+<circle cx="120" cy="120" r="112" fill="#DDEFE9"/>
+<ellipse cx="120" cy="96" rx="64" ry="62" fill="#3B2A22"/>
+<path d="M84 208 Q120 192 156 208 L166 240 H74Z" fill="#E8B894"/>
+<path d="M70 240 Q72 210 120 206 Q168 210 170 240Z" fill="#fff" stroke="#22302D" stroke-width="3"/>
+<ellipse cx="120" cy="128" rx="54" ry="66" fill="#E8B894" stroke="#22302D" stroke-width="3"/>
+<path d="M72 120 C72 80 168 80 168 120 C168 175 150 186 120 186 C90 186 72 175 72 120Z" fill="#BDEBD8" opacity=".95"/>
+<ellipse cx="98" cy="122" rx="15" ry="9" fill="#E8B894"/><ellipse cx="142" cy="122" rx="15" ry="9" fill="#E8B894"/>
+<circle cx="98" cy="122" r="12" fill="#9ED98F" stroke="#22302D" stroke-width="2.5"/><circle cx="98" cy="122" r="7" fill="#C8EDC0"/>
+<circle cx="142" cy="122" r="12" fill="#9ED98F" stroke="#22302D" stroke-width="2.5"/><circle cx="142" cy="122" r="7" fill="#C8EDC0"/>
+<path d="M106 162 q14 10 28 0" stroke="#22302D" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M58 62 C70 30 170 30 182 62 C160 52 80 52 58 62Z" fill="#F6DCD6" stroke="#22302D" stroke-width="3"/>
+<circle cx="182" cy="58" r="12" fill="#F6DCD6" stroke="#22302D" stroke-width="3"/>
+<path class="brilla" d="M40 70 Q40 80 50 80 Q40 80 40 90 Q40 80 30 80 Q40 80 40 70Z" fill="#FFB547"/><path class="brilla2" d="M206 141 Q206 150 215 150 Q206 150 206 159 Q206 150 197 150 Q206 150 206 141Z" fill="#A592E0"/><g class="flota"><path class="" d="M196 38.0 C186 50.0 186 61.0 196 61.0 C206 61.0 206 50.0 196 38.0Z" fill="#9ED9E8" stroke="#22302D" stroke-width="2.5"/><ellipse cx="192.5" cy="53.0" rx="1.7999999999999998" ry="3.0" fill="#fff" opacity=".8"/></g>
+</g></svg>
